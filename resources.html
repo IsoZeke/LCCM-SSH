@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Resources LCCM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="lccm-logo.png" alt="LCCM Seal">
+        <div>
+            <h1>La Consolacion College Manila</h1>
+            <p>Student Support Directory</p>
+        </div>
+        <div class="accessibility-controls">
+            <button onclick="toggleDarkMode()" id="darkModeBtn" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button onclick="resizeText()" id="resizeBtn" title="Resize Text">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content-card reveal">
+            <div class="directory-header">
+                <h2>Mental Health Directory</h2>
+                <p class="edu-subtitle">Filter through our curated list of campus services, national hotlines, and digital wellness tools to find the support that best fits your current situation.</p>
+            </div>
+
+            <div class="filter-controls">
+                <button class="btn-filter active" onclick="filterResources('all', this)">All Resources</button>
+                <button class="btn-filter" onclick="filterResources('lccm', this)">LCCM Services</button>
+                <button class="btn-filter" onclick="filterResources('crisis', this)">Crisis Hotlines</button>
+                <button class="btn-filter" onclick="filterResources('wellness', this)">Wellness Apps</button>
+            </div>
+
+            <div class="resource-grid">
+                <div class="resource-card reveal">
+                    <span class="resource-badge">Campus Support</span>
+                    <h3>Guidance & Counseling</h3>
+                    <p>Professional counseling services available exclusively for enrolled LCCM students facing academic or personal challenges.</p>
+                    <div class="resource-contact">
+                        <strong>Location:</strong> Admin Building, 1st Floor<br>
+                        <strong>Email:</strong> guidance@lccm.edu.ph
+                    </div>
+                </div>
+
+                <div class="resource-card reveal">
+                    <span class="resource-badge">Spiritual Support</span>
+                    <h3>Campus Chaplaincy</h3>
+                    <p>Provides spiritual guidance, pastoral care, and a safe space for students seeking faith based support and reflection.</p>
+                    <div class="resource-contact">
+                        <strong>Location:</strong> Campus Chapel<br>
+                        <strong>Hours:</strong> Mon Fri, 9AM 4PM
+                    </div>
+                </div>
+
+                <div class="resource-card reveal">
+                    <span class="resource-badge" style="background: #f44336; color: white;">Crisis Support</span>
+                    <h3>NCMH Crisis Hotline</h3>
+                    <p>National Center for Mental Health offers 24/7 free, confidential psychological support and crisis intervention.</p>
+                    <div class="resource-contact">
+                        <strong>Luzon:</strong> 1553<br>
+                        <strong>Mobile:</strong> 0917 899 8727
+                    </div>
+                </div>
+
+                <div class="resource-card reveal">
+                    <span class="resource-badge" style="background: #f44336; color: white;">Crisis Support</span>
+                    <h3>Hopeline Philippines</h3>
+                    <p>A 24/7 suicide prevention and crisis support helpline providing emotional support to anyone in distress.</p>
+                    <div class="resource-contact">
+                        <strong>Mobile 1:</strong> 0917 558 4673<br>
+                        <strong>Mobile 2:</strong> 0918 873 4673
+                    </div>
+                </div>
+
+                <div class="resource-card reveal">
+                    <span class="resource-badge" style="background: #4caf50; color: white;">Wellness Apps</span>
+                    <h3>MindShift CBT</h3>
+                    <p>A free app designed to help teens and young adults cope with anxiety using Cognitive Behavioral Therapy tools.</p>
+                    <div class="resource-contact">
+                        <strong>Access:</strong> Free on iOS & Android<br>
+                        <strong>Features:</strong> Thought journals, coping cards
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="college-name">La Consolacion College Manila</p>
+        <p>© 2026 Student Well being Project. All Rights Reserved.</p>
+    </footer>
+
+    <a href="tel:1553" class="floating-emergency" title="National Mental Health Crisis Hotline">
+        <i class="fas fa-phone-alt"></i>
+        <span>Crisis Hotline</span>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

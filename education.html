@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Education LCCM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="lccm-logo.png" alt="LCCM Seal">
+        <div>
+            <h1>La Consolacion College Manila</h1>
+            <p>La Consolacion College Manila Support Hub</p>
+        </div>
+        <div class="accessibility-controls">
+            <button onclick="toggleDarkMode()" id="darkModeBtn" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button onclick="resizeText()" id="resizeBtn" title="Resize Text">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="tip-container reveal">
+            <small class="tip-label">Wellness Tip of the Day</small>
+            <p id="wellnessTip">Loading your daily tip...</p>
+            <button class="btn-tip" onclick="generateTip()">Get New Tip</button>
+        </div>
+
+        <section class="content-card reveal">
+            <h2>Understanding Student Well being</h2>
+            <p class="edu-subtitle">Access professional insights to identify early indicators of mental health challenges and maintain academic balance.</p>
+            
+            <hr class="divider">
+
+            <div class="education-grid">
+                <div class="info-item reveal">
+                    <h3>Academic Burnout</h3>
+                    <p>A specific state of exhaustion caused by prolonged exposure to high pressure study environments.</p>
+                    <ul>
+                        <li>Loss of motivation for core major subjects.</li>
+                        <li>Feeling detached from student organizations or peers.</li>
+                        <li>Noticeable decline in performance and focus.</li>
+                        <li>Chronic physical fatigue despite adequate sleep.</li>
+                    </ul>
+                </div>
+
+                <div class="info-item reveal">
+                    <h3>Anxiety Disorders</h3>
+                    <p>Persistent and excessive worry that interferes with your ability to perform daily campus tasks.</p>
+                    <ul>
+                        <li>Intense fear of public speaking or class presentations.</li>
+                        <li>Over analyzing social interactions with professors or peers.</li>
+                        <li>Physical symptoms like rapid heartbeat or trembling.</li>
+                        <li>Difficulty concentrating on lectures due to racing thoughts.</li>
+                    </ul>
+                </div>
+                
+                <div class="info-item reveal">
+                    <h3>Depressive Symptoms</h3>
+                    <p>More than just temporary sadness, these symptoms involve a long lasting low mood that affects functioning.</p>
+                    <ul>
+                        <li>Persistent feelings of hopelessness regarding the future.</li>
+                        <li>Significant changes in appetite or weight.</li>
+                        <li>Loss of interest in hobbies previously enjoyed.</li>
+                        <li>Withdrawing from social life and family obligations.</li>
+                    </ul>
+                </div>
+
+                <div class="info-item reveal">
+                    <h3>Social Isolation</h3>
+                    <p>Feeling disconnected or alienated from the LCCM community, which can trigger other mental health issues.</p>
+                    <ul>
+                        <li>Intentional avoidance of common areas like the canteen.</li>
+                        <li>Difficulty forming meaningful bonds within your block.</li>
+                        <li>Feeling like you are an outsider in your chosen course.</li>
+                        <li>Lack of a support system for academic challenges.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="breathe-section reveal">
+                <h3 class="breathe-title">Breathe with Me</h3>
+                <p class="breathe-subtitle">Focus on the circle to calm your mind before the assessment.</p>
+                <div class="breathe-container">
+                    <div class="breathe-circle">
+                        <div id="breatheText">Inhale</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quiz-container reveal">
+                <div id="quizIntro">
+                    <h2 class="quiz-title">Stress Level Quick Check</h2>
+                    <p>Use this confidential assessment tool to evaluate your current psychological well being.</p>
+                    <button class="btn-start" onclick="startQuiz()">Start Assessment</button>
+                </div>
+
+                <div id="quizContent">
+                    <h3 class="quiz-subtitle">Confidential Assessment</h3>
+                    <form id="stressQuiz">
+                        <div class="quiz-question">1. I feel overwhelmed by my current school requirements.</div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q1" value="0"> Never or rarely</label>
+                            <label><input type="radio" name="q1" value="1"> Sometimes</label>
+                            <label><input type="radio" name="q1" value="2"> Frequently</label>
+                        </div>
+
+                        <div class="quiz-question">2. I find it difficult to relax after a long day of classes.</div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q2" value="0"> Never or rarely</label>
+                            <label><input type="radio" name="q2" value="1"> Sometimes</label>
+                            <label><input type="radio" name="q2" value="2"> Frequently</label>
+                        </div>
+
+                        <div class="quiz-question">3. I have been feeling more irritable or frustrated lately.</div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q3" value="0"> Never or rarely</label>
+                            <label><input type="radio" name="q3" value="1"> Sometimes</label>
+                            <label><input type="radio" name="q3" value="2"> Frequently</label>
+                        </div>
+
+                        <div class="quiz-question">4. I am having trouble falling asleep or staying asleep.</div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q4" value="0"> Never or rarely</label>
+                            <label><input type="radio" name="q4" value="1"> Sometimes</label>
+                            <label><input type="radio" name="q4" value="2"> Frequently</label>
+                        </div>
+
+                        <div class="quiz-question">5. I experience physical symptoms like muscle tension or headaches.</div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q5" value="0"> Never or rarely</label>
+                            <label><input type="radio" name="q5" value="1"> Sometimes</label>
+                            <label><input type="radio" name="q5" value="2"> Frequently</label>
+                        </div>
+
+                        <div class="quiz-question">6. I feel like I have no time for personal hobbies or family.</div>
+                        <div class="quiz-options">
+                            <label><input type="radio" name="q6" value="0"> Never or rarely</label>
+                            <label><input type="radio" name="q6" value="1"> Sometimes</label>
+                            <label><input type="radio" name="q6" value="2"> Frequently</label>
+                        </div>
+
+                        <button type="button" class="btn-check" onclick="calculateScore()">Submit for Analysis</button>
+                    </form>
+
+                    <div id="meter-container">
+                        <h3 id="status-text">Your Wellness Status</h3>
+                        <div class="meter-bg"><div id="meter-fill"></div></div>
+                        <p id="feedback-text"></p>
+                        <p id="advice-text"></p>
+                        <button class="btn-retake" onclick="location.reload()">Retake Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="college-name">La Consolacion College Manila</p>
+        <p>© 2026 Student Well being Project. All Rights Reserved.</p>
+    </footer>
+
+    <a href="tel:1553" class="floating-emergency" title="National Mental Health Crisis Hotline">
+        <i class="fas fa-phone-alt"></i>
+        <span>Crisis Hotline</span>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

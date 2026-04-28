@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCM Student Support Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="lccm-logo.png" alt="LCCM Seal">
+        <div>
+            <h1>La Consolacion College Manila</h1>
+            <p>We care about your mental health</p>
+        </div>
+        <div class="accessibility-controls">
+            <button onclick="toggleDarkMode()" id="darkModeBtn" title="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button onclick="resizeText()" id="resizeBtn" title="Resize Text">
+                <i class="fas fa-text-height"></i>
+            </button>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div class="card reveal">
+                <h2 class="section-title">Student Support Hub</h2>
+                <p class="section-subtitle">A specialized initiative dedicated to the holistic well-being of the LCCM community.</p>
+                
+                <hr class="divider">
+
+                <div class="objectives-grid">
+                    <div class="objective-item reveal">
+                        <i class="fas fa-bullhorn obj-icon"></i>
+                        <h4>Advocacy</h4>
+                        <p>Eliminating mental health stigma through transparent dialogue and awareness campaigns across campus.</p>
+                    </div>
+
+                    <div class="objective-item reveal">
+                        <i class="fas fa-book-open obj-icon"></i>
+                        <h4>Education</h4>
+                        <p>Equipping students with the knowledge to identify clinical indicators of stress and burnout early.</p>
+                    </div>
+
+                    <div class="objective-item reveal">
+                        <i class="fas fa-hands-helping obj-icon"></i>
+                        <h4>Support</h4>
+                        <p>Bridging the gap between students and professional counseling through direct support pathways.</p>
+                    </div>
+
+                    <div class="objective-item reveal">
+                        <i class="fas fa-leaf obj-icon"></i>
+                        <h4>Culture</h4>
+                        <p>Fostering an academic environment that prioritizes psychological safety alongside excellence.</p>
+                    </div>
+                </div>
+
+                <a href="resources.html" class="btn-directory">View Support Directory</a>
+            </div>
+        </section>
+
+        <section id="resources" class="resource-box reveal">
+            <h2 class="section-title">Find Us on Campus</h2>
+            <p class="section-subtitle">Visit the Guidance and Counseling Center for professional support.</p>
+            
+            <div class="map-container">
+                <div class="map-frame">
+                <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.100862024921!2d120.98978137584556!3d14.593308877223783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339795f74b1eb957%3A0xae81d172c049094b!2sLa%20Consolacion%20College%20Manila!5e0!3m2!1sen!2sph!4v1711812345678!5m2!1sen!2sph" 
+    width="100%" 
+    height="100%" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+                 </iframe>
+                </div>
+
+                <div class="location-info">
+                    <h4><i class="fas fa-map-marker-alt" style="color: #002366; margin-right: 10px;"></i> Guidance Office</h4>
+                    <p><strong>Building:</strong> Admin Building</p>
+                    <p><strong>Floor:</strong> 1st Floor, Room ???</p>
+                    <p><strong>Address:</strong> 8 Mendiola St, San Miguel, Manila</p>
+                    <hr class="location-divider">
+                    <p><strong>Hours:</strong> Mon Fri | 8:00 AM 5:00 PM</p>
+                </div>
+            </div>
+
+            <div class="faq-section reveal">
+                <h3 class="faq-title">Common Concerns</h3>
+                <div class="faq-container">
+                    
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Does it cost money to visit the Guidance Office? <span><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            No. Counseling and guidance services are part of your student privileges at LCCM. There are no additional fees for speaking with our professionals.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Will my teachers find out what I talked about? <span><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            Your privacy is our priority. All sessions are strictly confidential. Information is only shared if there is an immediate risk to your safety or the safety of others.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            Do I need an appointment or can I just walk in? <span><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            Walk ins are welcome for urgent concerns. However, to ensure a counselor is available for a full session, we recommend scheduling an appointment via email or visiting the office in person.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="college-name">La Consolacion College Manila</p>
+        <p class="copyright">© 2026 Student Well-being Project. All Rights Reserved.</p>
+    </footer>
+
+    <a href="tel:1553" class="floating-emergency" title="National Mental Health Crisis Hotline">
+        <i class="fas fa-phone-alt"></i>
+        <span>Crisis Hotline</span>
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
